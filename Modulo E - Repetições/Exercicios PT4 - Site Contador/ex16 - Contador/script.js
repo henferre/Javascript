@@ -6,22 +6,27 @@ function contador() {
     //---Valindando inicio, fim e passo---
     if (inicio.value.length == '') {
         res.innerHTML = 'Inicio invalido! escolha um número.'
-    } if (fim.value.length == '') {
+    } else if (fim.value.length == '') {
         res.innerHTML = "Fim invalido! escolha um número."
-    } else if (Number(passo.value) == 0) {
-        window.alert("Passo invalido! Considerando passo = 1")
-        passo = 1
-    }
-    var i = Number(inicio.value)
-    var f = Number(fim.value)
-    var p = Number(passo.value)
-    if (i < f) {
-        while (inicio < fim) {
-            res.innerHTML = `${i}`
-            i += p
+    } else {
+        res.innerHTML = 'Contando:<br> '
+        var i = Number(inicio.value)
+        var f = Number(fim.value)
+        var p = Number(passo.value)
+        if (Number(passo.value) == '' || Number(passo.value) == 0) {
+            window.alert('Passo invalido! Considerando Passo = 1')
+            p = 1
         }
-    }else if (i > f) {
-        res.innerHTML = `${i}`
-        i -= p
-    }
+        if (i < f) {//Contagem Crescente
+            for (var c = i; c <= f; c += p) {
+                res.innerHTML += `${c} \u{1F449}`// excluo o U+ e coloco \u{codigo} do emoji. 
+            }
+        } else if (i > f) {//Contagem decrescente
+            for (var c = i; c >= f; c-= p) {
+                res.innerHTML += `${c} \u{1F449}`
+            }
+        }
+        res.innerHTML += `\u{1F3C1}`
+    }   
+    
 }   
