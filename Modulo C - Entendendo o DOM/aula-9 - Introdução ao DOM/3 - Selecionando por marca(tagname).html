@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionando por marca</title>
+    <style>
+        body{
+            background-color: rgb(201, 176, 142);
+            color: rgb(37, 34, 34);
+            font: normal 18pt  arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos no DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JS</p>
+    <div>Clique em mim</div>
+    
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write('Esta escrito assim: ' + p1.innerText)
+        //innerText pega texto da linha sem as formatações q ele tenha, só o texto.
+        
+        p1.style.color = 'blue'//muda os caracteries para azul
+        var corpo = window.document.body
+        //corpo.style.background = 'black' //mudando a cor da pagina
+
+        window.document.write('<br/>', p1.innerHTML)
+        //innerHTML pega a tag com tds as formatações q ela tiver
+    </script>
+</body>
+</html>

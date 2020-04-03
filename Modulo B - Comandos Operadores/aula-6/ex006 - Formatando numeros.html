@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatando numeros</title>
+    <style>
+        body{
+            background-color: rgb(150, 150, 233);
+            font: normal 20pt  arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        n1 = 1545.5
+        document.write(`${n1.toFixed(2)}<br/n>`)
+        document.write(`${n1.toFixed(2).replace('.', ',')}<br/>`)
+        document.white(`${n1.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`)
+        /*
+        toFixed() serve para formatar um numero float.
+        
+        replace pega o '.' e devolve uma ',' no lugar.
+        
+        toLocaleSting() devolve a converção da moeda com R$ da 
+        moeda na frente, se for moeda de outros paises é só 
+        mudar o BRL para a sigla desejada. embora q n 
+        consegui fazer aqui, só no node.
+        */
+    </script>
+</body>
+</html>

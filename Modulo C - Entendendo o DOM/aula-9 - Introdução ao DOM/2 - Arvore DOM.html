@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos no DOM</title>
+    <style>
+        body{
+            background-color: rgb(96, 96, 206);
+            color: cornsilk;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <!-- CTRL + SHIFT + P pra executar watch in chrome-->
+    <h1>Iniciando estudos no DOM</h1>
+    <p>Aqui vai o resultado.</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JS.</p>
+    <div>Clique aqui</div>
+    <script>
+        window.document.write(window.document.charset) //Meu SET de caracteres.
+        window.documento.write(window.navigator.appName) //Meu navegador atual.
+        window.document.write(window.document.URL) //url q estou acessando.
+        /*
+        Arvore DOM
+            window --> raiz do seu objeto(janela)
+                location --> URL, pagina atual, anterior.
+                document --> documento atual
+                    html
+                        head --> cabeçalho
+                            meta --> tags
+                            title --> tags
+                        body --> corpo
+                            h1
+                            p
+                            p
+                                strong
+                            div
+                History --> guarda sua navegação
+        
+        na arvore de hierarquia temos o parent(pai) 
+        e o child(filho)
+        Quem esta em baixo ou pra dentro smp é o filho e
+        quem esta em cima ou mais fora é o pai.
+
+        como document é pai do HTML e o head e o body são
+        filhos do html.      
+        */
+    </script>
+</body>
+</html>

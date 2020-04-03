@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionando por ID, Name e Class</title>
+    <style>
+        body{
+            background-color: rgb(201, 176, 142);
+            color: rgb(37, 34, 34);
+            font: normal 18pt  arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos no DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JS</p>
+    
+    <!--começo mudando o div normal, add id = 'msg'-->
+    <div id = 'msg'>Clique em mim</div>
+
+    <!--começo mudando o div normal, add name = 'msg'-->
+    <div name = 'msg'>Clique em mim</div>
+
+    <!--começo mudando o div normal, add class = 'msg'-->
+    <div class = 'msg'>Clique em mim</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write('Esta escrito assim: ' + p1.innerText)
+        var d = document.getElementById('msg')
+
+        d.style.background = 'green'
+        //mudando a linha dessa div para verde.
+
+        d.innerText = 'Estou aguardando...'
+        //mudei o conteudo da div.
+        /*
+        var e = document.getElementsByName('msg')[0]
+        e.innerText = 'Agora virei nome'
+
+        var f = window.document.getElementsByClassName('msg')[0]
+        // se estiver no plural precisa colocar o elemento q quer
+        */
+    </script>
+</body>
+</html>

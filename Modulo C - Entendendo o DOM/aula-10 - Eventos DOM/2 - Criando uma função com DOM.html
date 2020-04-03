@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anotações de Eventos DOM</title>
+    <style>
+        div#area{/*configurando o formato da DIV*/
+            font: normal 20 pt arial;
+            background: rgb(110, 177, 43);
+            color: white;
+            width: 200px; /*largura*/
+            height: 200px; /*altura*/
+            line-height: 200px; /*altura do texto*/
+            text-align: center;/*localização do texto*/
+        }
+    </style>
+</head>
+<!--Vou colocar 2 metodos de como criar uma função
+função é um block de linhas q são executadas só 
+quando eu precisar, igual Python
+
+chamamos a função assim: function ação(){}
+Ou function ação(param){} quando precisa de um parametro
+SEMPRE por chaves {} no final-->
+
+<body>
+    <!--EXEMPLO de function direto na DIV-->
+    <!--<div id = 'area' onclick = 'clicar()' onmouseenter="entrar()" onmouseout="sair()"-->
+    <div id = 'area'> 
+        Interaja
+    </div>
+    
+    <script>
+        /*ao inves de usar o var a local dentro da função 
+        coloquei ele como global para tds as function*/
+        var a = window.document.getElementById('area')
+        
+        //EXEMPLO de function no script
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        
+        function clicar() {
+            //var a = window.document.getElementById('area')
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+        function entrar() {
+            a.innerText = 'Entrou!'
+        }
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'rgb(110, 177, 43)'
+        }
+    </script>
+</body>
+</html>

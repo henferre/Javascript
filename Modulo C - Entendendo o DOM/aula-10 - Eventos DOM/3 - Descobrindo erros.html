@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anotações de Eventos DOM</title>
+    <style>
+        div#area{/*configurando o formato da DIV*/
+            font: normal 20 pt arial;
+            background: rgb(110, 177, 43);
+            color: white;
+            width: 200px; /*largura*/
+            height: 200px; /*altura*/
+            line-height: 200px; /*altura do texto*/
+            text-align: center;/*localização do texto*/
+        }
+    </style>
+</head>
+<body>
+    <div id = 'area'> 
+        Interaja
+    </div>
+    
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+        function entrar() {
+            a.innerText = 'Entrou!'
+        }
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'rgb(110, 177, 43)'
+        }
+        /*
+        Se tiver um erro ele n mostrara na tela direto,
+        vc tera q clicar com botão direito na pagina
+        clicar em inspect/inspecionar e la aparecera
+        no canto direito um X1 ou mais numeros,
+        clicando nele, mostrara a linha onde esta
+        dando o erro.
+        */
+    </script>
+</body>
+</html>

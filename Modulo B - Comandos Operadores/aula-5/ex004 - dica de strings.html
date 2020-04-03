@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!--linguagem, deixei o site pt-br-->
+<head> <!--cabeça, configurações, isso é html-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatando Strings</title>
+    <style>
+        body{  
+            background-color: rgb(114, 114, 170);
+            color: white;
+            font: normal 20pt arial;
+        }
+    </style><!--style é as cores da pagina, isso é css-->
+</head>
+<body><!--corpo da pagina-->
+    <script>
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(prompt('Digite um número: '))
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}.`) //concatenação
+        //Posso formatar de 3 jeitos
+        /*
+        aspas simples ' '
+          aspas duplas " "
+          Crazi ``
+                var s = 'JavasScript'
+                'Eu estou aprendendo s' n   faz interpolação
+                'Eu estou aprendendo' + s   usa concatenação
+                `Eu estou aprendendo ${s}`  usa template string
+        */
+    </script>
+</body>
+</html>
